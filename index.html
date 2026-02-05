@@ -3,9 +3,427 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project-2fdc841770312335522</title>
+    <title>Slim Fast Ladies GYM - Women's Fitness Center in Chattogram</title>
+    <meta name="description" content="Slim Fast Ladies GYM - Professional women's fitness center in Chattogram. Achieve your fitness goals with our expert trainers and modern equipment.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text fill="white" font-size="50" y="50%">💪</text></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #ff5252;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .about h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+
+        .stars {
+            color: #ffd700;
+            margin-right: 10px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .service-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 2rem;
+            color: #667eea;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item .icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: #667eea;
+        }
+
+        .contact-item div h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item div p {
+            color: #666;
+        }
+
+        .hours {
+            margin-top: 2rem;
+        }
+
+        .hours p {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .hours ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hours li {
+            padding: 0.3rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours li:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Blank white page -->
+    <header>
+        <nav class="container">
+            <div class="logo">Slim Fast Ladies GYM</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Slim Fast Ladies GYM</h1>
+            <p>Empower yourself with our state-of-the-art fitness facilities designed exclusively for women. Achieve your fitness goals in a supportive and motivating environment.</p>
+            <a href="#contact" class="btn">Join Us Today</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Slim Fast Ladies GYM is Chattogram's premier women's fitness center, dedicated to helping women achieve their health and wellness goals. Our facility features modern equipment, expert trainers, and a supportive community atmosphere.</p>
+                    <div class="rating">
+                        <div class="stars">★★★★☆</div>
+                        <span>4.1 (20 reviews)</span>
+                    </div>
+                    <p>Category: Fitness Center</p>
+                </div>
+                <div>
+                    <h3>Why Choose Us?</h3>
+                    <ul style="margin-top: 1rem;">
+                        <li>Women-only environment for comfort and focus</li>
+                        <li>Certified female trainers and instructors</li>
+                        <li>Modern equipment and facilities</li>
+                        <li>Flexible membership options</li>
+                        <li>Group fitness classes and personal training</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">🏋️‍♀️</div>
+                    <h3>Strength Training</h3>
+                    <p>Build muscle and strength with our comprehensive weight training programs designed for women of all fitness levels.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🧘‍♀️</div>
+                    <h3>Yoga & Pilates</h3>
+                    <p>Improve flexibility, balance, and mental well-being with our yoga and Pilates classes led by experienced instructors.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🏃‍♀️</div>
+                    <h3>Cardio Fitness</h3>
+                    <p>Burn calories and improve cardiovascular health with our variety of cardio equipment and group fitness classes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">💆‍♀️</div>
+                    <h3>Personal Training</h3>
+                    <p>Get personalized attention with our one-on-one training sessions tailored to your specific fitness goals.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🥗</div>
+                    <h3>Nutrition Counseling</h3>
+                    <p>Receive expert guidance on nutrition and meal planning to complement your fitness journey.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">👭</div>
+                    <h3>Group Classes</h3>
+                    <p>Join our community of women in fun, motivating group fitness classes including Zumba, HIIT, and dance fitness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <div class="icon">📍</div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Mehdibag-10, Chattogram 4000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>01718-693051</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">🏷️</div>
+                        <div>
+                            <h4>Category</h4>
+                            <p>Fitness Center</p>
+                        </div>
+                    </div>
+                    <div class="hours">
+                        <p><strong>Opening Hours:</strong></p>
+                        <ul>
+                            <li>Monday - Thursday: 8:00 AM - 8:00 PM</li>
+                            <li>Friday: Closed</li>
+                            <li>Saturday - Sunday: 8:00 AM - 8:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3>Visit Us Today!</h3>
+                    <p style="margin-top: 1rem; line-height: 1.8;">Located in the heart of Chattogram, Slim Fast Ladies GYM is easily accessible and ready to welcome you to start your fitness journey. Our friendly staff is here to help you choose the right membership and get started on your path to a healthier lifestyle.</p>
+                    <p style="margin-top: 1rem;">Don't wait to transform your life. Join our community of strong, empowered women today!</p>
+                    <a href="tel:01718-693051" class="btn" style="margin-top: 2rem;">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Slim Fast Ladies GYM. All rights reserved. | Empowering Women Through Fitness</p>
+        </div>
+    </footer>
 </body>
 </html>
